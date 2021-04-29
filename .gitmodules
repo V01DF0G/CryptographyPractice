@@ -1,0 +1,6 @@
+[submodule "Vendor/fmt"]
+	path = Vendor/fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "Vendor/cryptopp"]
+	path = Vendor/cryptopp
+	url = https://github.com/weidai11/cryptopp

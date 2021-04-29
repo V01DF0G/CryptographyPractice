@@ -1,0 +1,11 @@
+#include Directories
+.vs/
+CC++ℵ/bin/
+CC++ℵ/bin-int/
+
+#include Files
+.user
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
