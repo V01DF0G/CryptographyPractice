@@ -114,45 +114,60 @@ configurations { "Debug", "Release" }
                         "cryptlib"
                     }
 
-                    project "RSACpp"
-                    location "RSACpp"
-                    kind "ConsoleApp"
-                    language "C++"
-                    cppdialect "C++17"
-                    staticruntime "on"
+    project "PWManager"
+            location "PWManager"
+            kind "WindowedApp"
+            language "C#"
+            staticruntime "on"
         
                     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
                     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
         
                     files
                     {
-                        "%{prj.name}/src/*.h",
-                        "%{prj.name}/src/*.hpp",
-                        "%{prj.name}/src/*.cpp",
-                    }
-        
-                    defines
-                    {
-                        "_CRT_SECURE_NO_WARNINGS",
-                    }
-        
-                    includedirs
-                    {
-                        "%{prj.name}/src/*",
-                        "%{IncludeDir.FMT}"     
+                        "%{prj.name}/src/*.cs"
                     }
 
-                    links
-                    {
-                        "FMT",
-                    }
-        
-                    filter "configurations:Debug"
-                            defines { "DEBUG" }
-                            runtime "Debug"
-                            symbols "On"
+                    links { "System","System.Core","Microsoft.CSharp","System.Windows.Forms","System.Collections.Generic","System.Runtime.Serialization","System.ComponentModel.DataAnnotations" }
+
+    project "RSACpp"
+            location "RSACpp"
+            kind "ConsoleApp"
+            language "C++"
+            cppdialect "C++17"
+            staticruntime "on"
+                    
+                targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+                objdir("bin-int/" .. outputdir .. "/%{prj.name}")
+                    
+                files
+                {
+                    "%{prj.name}/src/*.h",
+                    "%{prj.name}/src/*.hpp",
+                    "%{prj.name}/src/*.cpp",
+                }
                 
-                         filter "configurations:Release"
-                            defines { "NDEBUG" }
-                            runtime "Release"
-                            optimize "On"
+                defines
+                {
+                    "_CRT_SECURE_NO_WARNINGS",
+                }
+                
+                includedirs
+                {
+                    "%{prj.name}/src/*",
+                    "%{IncludeDir.FMT}"     
+                }
+                links
+                {
+                    "FMT",
+                }
+                
+                filter "configurations:Debug"
+                        defines { "DEBUG" }
+                        runtime "Debug"
+                        symbols "On"
+
+                     filter "configurations:Release"
+                        defines { "NDEBUG" }
+                        runtime "Release"
+                        optimize "on"
