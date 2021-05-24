@@ -35,7 +35,7 @@ namespace PWManager
             this.UsernameBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.RegisterLink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -90,23 +90,25 @@ namespace PWManager
             this.button1.TabIndex = 5;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // linkLabel1
+            // RegisterLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(57, 217);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(162, 17);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Don\'t have an account ?";
+            this.RegisterLink.AutoSize = true;
+            this.RegisterLink.Location = new System.Drawing.Point(57, 217);
+            this.RegisterLink.Name = "RegisterLink";
+            this.RegisterLink.Size = new System.Drawing.Size(162, 17);
+            this.RegisterLink.TabIndex = 6;
+            this.RegisterLink.TabStop = true;
+            this.RegisterLink.Text = "Don\'t have an account ?";
+            this.RegisterLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterLink_LinkClicked);
             // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 243);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.RegisterLink);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.UsernameBox);
@@ -129,6 +131,6 @@ namespace PWManager
         private System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel RegisterLink;
     }
 }

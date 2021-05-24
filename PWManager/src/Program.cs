@@ -25,14 +25,8 @@ namespace PWManager
              }
             DirectoryInfo antiEmptyDirInfo = new DirectoryInfo(path);
             
-            if(antiEmptyDirInfo.GetDirectories().Length == 0)
-            {
-                Application.Run(new RegisterWindow());
-            }
-            else
-            {
                 Application.Run(new LoginScreen());
-            }
+
             
         }
     }

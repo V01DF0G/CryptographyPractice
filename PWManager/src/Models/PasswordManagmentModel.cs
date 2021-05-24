@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PWManager.src.Models
 {
-    class PasswordManagmentModel
+    public class PasswordManagmentModel
     {
         public String Name { get; set; }
         public String Password { get; set; }
