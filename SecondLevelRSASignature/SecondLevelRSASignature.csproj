@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{475AE5B4-B3C4-992B-FC02-4BD168AC7780}</ProjectGuid>
+    <ProjectGuid>{D1989A5A-3DD0-E2F1-46DA-4615B29009EB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PWManager</RootNamespace>
-    <AssemblyName>PWManager</AssemblyName>
+    <RootNamespace>SecondLevelRSASignature</RootNamespace>
+    <AssemblyName>SecondLevelRSASignature</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -17,8 +17,8 @@
     <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug-windows-x86_64\PWManager\</OutputPath>
-    <BaseIntermediateOutputPath>..\bin-int\Debug-windows-x86_64\PWManager\</BaseIntermediateOutputPath>
+    <OutputPath>..\bin\Debug-windows-x86_64\SecondLevelRSASignature\</OutputPath>
+    <BaseIntermediateOutputPath>..\bin-int\Debug-windows-x86_64\SecondLevelRSASignature\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants>
     </DefineConstants>
@@ -29,8 +29,8 @@
     <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\Release-windows-x86_64\PWManager\</OutputPath>
-    <BaseIntermediateOutputPath>..\bin-int\Release-windows-x86_64\PWManager\</BaseIntermediateOutputPath>
+    <OutputPath>..\bin\Release-windows-x86_64\SecondLevelRSASignature\</OutputPath>
+    <BaseIntermediateOutputPath>..\bin-int\Release-windows-x86_64\SecondLevelRSASignature\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants>
     </DefineConstants>
@@ -50,71 +50,21 @@
     <Reference Include="CsvHelper" />
     <Reference Include="Konscious.Security.Cryptography.Argon2" />
     <Reference Include="Konscious.Security.Cryptography.Blake2" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginScreen.Designer.cs">
-      <DependentUpon>LoginScreen.cs</DependentUpon>
-      <SubType>Dependency</SubType>
-    </Compile>
-    <Compile Include="LoginScreen.cs">
+    <Compile Include="src\SecondLevelRSA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="LoginScreen.resx">
-      <DependentUpon>LoginScreen.cs</DependentUpon>
-      <SubType>DesignerType</SubType>
-    </EmbeddedResource>
-    <Compile Include="NewPasswordForm.Designer.cs">
-      <DependentUpon>NewPasswordForm.cs</DependentUpon>
-      <SubType>Dependency</SubType>
+    <Compile Include="src\SecondLevelRSA.Designer.cs">
+      <DependentUpon>SecondLevelRSA.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewPasswordForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="NewPasswordForm.resx">
-      <DependentUpon>NewPasswordForm.cs</DependentUpon>
-      <SubType>DesignerType</SubType>
-    </EmbeddedResource>
-    <Compile Include="PassWordManageWindowLoggedIn.Designer.cs">
-      <DependentUpon>PassWordManageWindowLoggedIn.cs</DependentUpon>
-      <SubType>Dependency</SubType>
-    </Compile>
-    <Compile Include="PassWordManageWindowLoggedIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="PassWordManageWindowLoggedIn.resx">
-      <DependentUpon>PassWordManageWindowLoggedIn.cs</DependentUpon>
-      <SubType>DesignerType</SubType>
-    </EmbeddedResource>
-    <Compile Include="PasswordManagerControl.Designer.cs">
-      <DependentUpon>PasswordManagerControl.cs</DependentUpon>
-      <SubType>Dependency</SubType>
-    </Compile>
-    <Compile Include="PasswordManagerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <EmbeddedResource Include="PasswordManagerControl.resx">
-      <DependentUpon>PasswordManagerControl.cs</DependentUpon>
-      <SubType>DesignerType</SubType>
-    </EmbeddedResource>
-    <Compile Include="RegisterWindow.Designer.cs">
-      <DependentUpon>RegisterWindow.cs</DependentUpon>
-      <SubType>Dependency</SubType>
-    </Compile>
-    <Compile Include="RegisterWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="RegisterWindow.resx">
-      <DependentUpon>RegisterWindow.cs</DependentUpon>
-      <SubType>DesignerType</SubType>
-    </EmbeddedResource>
-    <Compile Include="src\Models\PasswordManagmentModel.cs" />
-    <Compile Include="src\Models\UserInfo.cs" />
     <Compile Include="src\Program.cs" />
-    <Compile Include="src\Utilities\AESUtils.cs" />
-    <Compile Include="src\Utilities\Argon2Util.cs" />
-    <Compile Include="src\Utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="src\SecondLevelRSA.resx">
+      <DependentUpon>SecondLevelRSA.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="27.0.4" />

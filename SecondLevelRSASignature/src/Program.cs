@@ -1,0 +1,34 @@
+using SecondLevelRSASignature.src;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SecondLevelRSASignature.src
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            string startupPath = Environment.CurrentDirectory;
+            String path = Environment.CurrentDirectory + "/PasswordManagmentData";
+            if(!Directory.Exists(path))
+             {
+                Directory.CreateDirectory(path);
+             }
+            DirectoryInfo antiEmptyDirInfo = new DirectoryInfo(path);
+            
+                Application.Run(new SecondLevelRSA());
+
+            
+        }
+    }
+}

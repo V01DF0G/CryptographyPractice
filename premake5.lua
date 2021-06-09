@@ -125,10 +125,28 @@ configurations { "Debug", "Release" }
         
                     files
                     {
-                        "%{prj.name}/src/*.cs"
+                        "%{prj.name}/src/**.cs",
+                        "%{prj.name}/*.cs",
+                        "%{prj.name}/*.resx",
+                        
                     }
 
-                    links { "System","System.Core","Microsoft.CSharp","System.Windows.Forms","System.Collections.Generic","System.Runtime.Serialization","System.ComponentModel.DataAnnotations" }
+                    links { "System",
+                    "System.Core",
+                    "Microsoft.CSharp",
+                    "System.Windows.Forms",
+                    "System.Collections.Generic",
+                    "System.Runtime.Serialization",
+                    "System.ComponentModel.DataAnnotations"
+                    ,"System.Drawing"
+                    ,"System.Data"
+                    ,"CsvHelper"
+                    ,"Konscious.Security.Cryptography.Argon2" 
+                    ,"Konscious.Security.Cryptography.Blake2"}
+
+                    nuget{"CsvHelper:27.0.4"
+                    ,"Konscious.Security.Cryptography.Argon2:1.2.1" 
+                    ,"Konscious.Security.Cryptography.Blake2:1.0.9"}
 
     project "RSACpp"
             location "RSACpp"
@@ -171,3 +189,71 @@ configurations { "Debug", "Release" }
                         defines { "NDEBUG" }
                         runtime "Release"
                         optimize "on"
+
+    project "FirstLevelRSASignature"
+            location "FirstLevelRSASignature"
+                kind "WindowedApp"
+                language "C#"
+                staticruntime "on"
+            
+                        targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+                        objdir("bin-int/" .. outputdir .. "/%{prj.name}")
+            
+                        files
+                        {
+                            "%{prj.name}/src/**.cs",
+                            "%{prj.name}/*.cs",
+                            "%{prj.name}/*.resx",
+                            
+                        }
+    
+                        links { "System",
+                        "System.Core",
+                        "Microsoft.CSharp",
+                        "System.Windows.Forms",
+                        "System.Collections.Generic",
+                        "System.Runtime.Serialization",
+                        "System.ComponentModel.DataAnnotations"
+                        ,"System.Drawing"
+                        ,"System.Data"
+                        ,"CsvHelper"
+                        ,"Konscious.Security.Cryptography.Argon2" 
+                        ,"Konscious.Security.Cryptography.Blake2"}
+    
+                        nuget{"CsvHelper:27.0.4"
+                        ,"Konscious.Security.Cryptography.Argon2:1.2.1" 
+                        ,"Konscious.Security.Cryptography.Blake2:1.0.9"}
+
+    project "SecondLevelRSASignature"
+            location "SecondLevelRSASignature"
+                            kind "WindowedApp"
+                            language "C#"
+                            staticruntime "on"
+                        
+                                    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+                                    objdir("bin-int/" .. outputdir .. "/%{prj.name}")
+                        
+                                    files
+                                    {
+                                        "%{prj.name}/src/**.cs",
+                                        "%{prj.name}/*.cs",
+                                        "%{prj.name}/*.resx",
+                                        
+                                    }
+                
+                                    links { "System",
+                                    "System.Core",
+                                    "Microsoft.CSharp",
+                                    "System.Windows.Forms",
+                                    "System.Collections.Generic",
+                                    "System.Runtime.Serialization",
+                                    "System.ComponentModel.DataAnnotations"
+                                    ,"System.Drawing"
+                                    ,"System.Data"
+                                    ,"CsvHelper"
+                                    ,"Konscious.Security.Cryptography.Argon2" 
+                                    ,"Konscious.Security.Cryptography.Blake2"}
+                
+                                    nuget{"CsvHelper:27.0.4"
+                                    ,"Konscious.Security.Cryptography.Argon2:1.2.1" 
+                                    ,"Konscious.Security.Cryptography.Blake2:1.0.9"}

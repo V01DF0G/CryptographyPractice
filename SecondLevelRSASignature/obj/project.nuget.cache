@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "/hSRnEepfuesB1RPtD4IByIPposKsfMFy1BbajlBWOBkdidhFQtT6tlXPxI2SLbIkeFENbJfypSBjXp7ZOWNQQ==",
+  "success": true,
+  "projectFilePath": "B:\\PROJECTS\\CryptographyPractice\\SecondLevelRSASignature\\SecondLevelRSASignature.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AOmega901\\.nuget\\packages\\csvhelper\\27.0.4\\csvhelper.27.0.4.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\konscious.security.cryptography.argon2\\1.2.1\\konscious.security.cryptography.argon2.1.2.1.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\konscious.security.cryptography.blake2\\1.0.9\\konscious.security.cryptography.blake2.1.0.9.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\AOmega901\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

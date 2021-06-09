@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "B:\\PROJECTS\\CryptographyPractice\\PWManager\\PWManager.csproj": {}
+  },
+  "projects": {
+    "B:\\PROJECTS\\CryptographyPractice\\PWManager\\PWManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "B:\\PROJECTS\\CryptographyPractice\\PWManager\\PWManager.csproj",
+        "projectName": "PWManager",
+        "projectPath": "B:\\PROJECTS\\CryptographyPractice\\PWManager\\PWManager.csproj",
+        "packagesPath": "C:\\Users\\AOmega901\\.nuget\\packages\\",
+        "outputPath": "B:\\PROJECTS\\CryptographyPractice\\PWManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\AOmega901\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[27.0.4, )"
+            },
+            "Konscious.Security.Cryptography.Argon2": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "Konscious.Security.Cryptography.Blake2": {
+              "target": "Package",
+              "version": "[1.0.9, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
